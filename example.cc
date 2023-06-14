@@ -2,7 +2,7 @@
 #include <iomanip>
 
 #include "fastjet/PseudoJet.hh"
-#include "SDFlavPlugin.hh" // In external code, this may become fastjet/contrib/IFNPlugin.hh
+#include "SDFlavPlugin.hh" 
 #include "FlavInfo.hh"
 
 using namespace std;
@@ -49,34 +49,25 @@ int main(int iargc, char **argv){
     // run the jet clustering with the base jet definition and the
     // IFNPlugin-based jet definition
     vector<PseudoJet> base_jets = base_jet_def(event);
-
     cout<<"now do the sd..."<<endl;
-    vector<PseudoJet> sd_jets = base_jet_def(event);
-    sdFlavCalc(sd_jets);
+    vector<PseudoJet> sdflav_jets = base_jet_def(event);
+    sdFlavCalc(sdflav_jets);
 
     // // ----------------------------------------------------
     // // loop over the two leading jets and print out their properties
-    // for (unsigned int ijet = 0; ijet < base_jets.size() && ijet < njetmax; ijet++) {
-    //   // first print out the original anti-kt jets and the IFN jets
-    //   const auto & base_jet = base_jets[ijet];
-    //   const auto & IFN_jet  = IFN_jets [ijet];
-    //   cout << endl;
-    //   cout << "base jet " << ijet << ": ";
-    //   cout << "pt=" << base_jet.pt() << " rap=" << base_jet.rap() << " phi=" << base_jet.phi();
-    //   cout << ", flav = " << FlavHistory::current_flavour_of(base_jet).description() << endl;
-    //   cout << "IFN jet  " << ijet << ": ";
-    //   cout << "pt=" << IFN_jet.pt() << " rap=" << IFN_jet.rap() << " phi=" << IFN_jet.phi();
-    //   cout << ", flav = " << FlavHistory::current_flavour_of(IFN_jet).description() << endl;
+    for (unsigned int ijet = 0; ijet < base_jets.size() && ijet < njetmax; ijet++) {
+      // first print out the original anti-kt jets and the IFN jets
+      const auto & base_jet = base_jets[ijet];
+      const auto & sdflav_jet  = sdflav_jets [ijet];
+      cout << endl;
+      cout << "base jet " << ijet << ": ";
+      cout << "pt=" << base_jet.pt() << " rap=" << base_jet.rap() << " phi=" << base_jet.phi();
+      cout << ", flav = " << FlavHistory::current_flavour_of(base_jet).description() << endl;
+      cout << "SD flav jet  " << ijet << ": ";
+      cout << "pt=" << sdflav_jet.pt() << " rap=" << sdflav_jet.rap() << " phi=" << sdflav_jet.phi();
+      cout << ", flav = " << FlavHistory::current_flavour_of(sdflav_jet).description() << endl;
 
-    //   // for the first event, print out the jet constituents' pt and initial and final flavours
-    //   cout << "constituents:" << endl;
-    //   for (const auto & c: sorted_by_pt(IFN_jet.constituents())) {
-    //     cout << "  pt = " << setw(10) << c.pt();
-    //     cout << ", orig. flav = " << setw(8) << FlavHistory::initial_flavour_of(c).description();
-    //     cout << ", final flav = " << setw(8) << FlavHistory::current_flavour_of(c).description();          
-    //     cout << endl;
-    //   }
-    // }
+    }
   }
 
   return 0;

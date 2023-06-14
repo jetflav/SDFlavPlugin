@@ -21,15 +21,16 @@ public:
             0};
 
     m_plugin = new fastjet::JadePlugin();
-    fastjet::Recluster recluster = {fastjet::JetDefinition(m_plugin)};
-    m_sd.set_reclustering(true,&recluster);
+    m_recluster = {fastjet::JetDefinition(m_plugin)};
+    m_sd.set_reclustering(true,&m_recluster);
 
   }
 
   fastjet::contrib::SoftDrop m_sd = {0,0,1};
   fastjet::JetDefinition::Plugin * m_plugin;
+  fastjet::Recluster m_recluster;
 
-  void operator()(fastjet::PseudoJet& j);
+  void operator()(fastjet::PseudoJet& jet);
   void operator()(std::vector<fastjet::PseudoJet>& jets);
 
 };
