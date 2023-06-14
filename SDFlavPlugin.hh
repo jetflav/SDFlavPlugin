@@ -29,6 +29,7 @@ public:
   fastjet::contrib::SoftDrop m_sd = {0,0,1};
   fastjet::JetDefinition::Plugin * m_plugin;
 
+  void operator()(fastjet::PseudoJet& j);
   void operator()(std::vector<fastjet::PseudoJet>& jets);
 
 };
