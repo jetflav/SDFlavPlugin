@@ -1,24 +1,24 @@
 
 INCL=${HOME}/hepsoftware/include
+LIBS=${HOME}/hepsoftware/lib
 
-all: libSDFlavPlugin.so libFlavInfo.so
+all: libSDFlavPlugin.a libFlavInfo.a
 
 SDFlavPlugin.o: SDFlavPlugin.cc
 	g++ -std=c++11 -c SDFlavPlugin.cc -I${INCL}
 
-libSDFlavPlugin.so: SDFlavPlugin.o libFlavInfo.so
-	g++ -std=c++11 -shared SDFlavPlugin.o -lfastjet -lFlavInfo -lfastjetcontribfragile -lfastjettools -lfastjetplugins -L${HOME}/hepsoftware/lib -L. -o libSDFlavPlugin.so
-
+libSDFlavPlugin.a: SDFlavPlugin.o libFlavInfo.a
+	ar rvs libSDFlavPlugin.a SDFlavPlugin.o
 
 FlavInfo.o: FlavInfo.cc FlavInfo.hh
 	g++ -std=c++11 -c FlavInfo.cc -I${INCL}
 
-libFlavInfo.so: FlavInfo.o
-	g++ -std=c++11 -shared FlavInfo.o -I${INCL} -lfastjet -lfastjetcontribfragile -lfastjettools -L${HOME}/hepsoftware/lib -o libFlavInfo.so
+libFlavInfo.a: FlavInfo.o
+	ar rvs libFlavInfo.a FlavInfo.o
 
 
-example: libSDFlavPlugin.so libFlavInfo.so
-	g++ -std=c++11	example.cc -lSDFlavPlugin -lFlavInfo -lfastjet -lfastjetcontribfragile -lfastjetplugins -lfastjettools -I${INCL} -L${HOME}/hepsoftware/lib -L. -o run
+example: libSDFlavPlugin.a libFlavInfo.a
+	g++ -std=c++11	example.cc -lSDFlavPlugin -lFlavInfo -lfastjet -lfastjetcontribfragile -lfastjetplugins -lfastjettools -I${INCL} -L${LIBS} -L. -o run
 
 clean:
-	rm -f SDFlavPlugin.o FlavInfo.o libSDFlavPlugin.so libFlavInfo.so run
+	rm -f SDFlavPlugin.o FlavInfo.o libSDFlavPlugin.a libFlavInfo.a run
