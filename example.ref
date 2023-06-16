@@ -1,0 +1,263 @@
+#--------------------------------------------------------------------------
+#                         FastJet release 3.3.4
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+
+#---------------------------------------------------------------
+# read event 0 with 64 particles
+now do the sd...
+
+base jet 0: pt=160.77 rap=0.90783 phi=0.366217, flav = [u ]
+SD flav jet  0: pt=160.77 rap=0.90783 phi=0.366217, flav = [u ]
+
+base jet 1: pt=8.49978 rap=0.550912 phi=0.0241549, flav = [d u ]
+SD flav jet  1: pt=8.49978 rap=0.550912 phi=0.0241549, flav = [d u ]
+
+base jet 2: pt=7.96449 rap=1.98751 phi=4.56023, flav = [bbar bbar ]
+SD flav jet  2: pt=7.96449 rap=1.98751 phi=4.56023, flav = [bbar bbar ]
+
+base jet 3: pt=7.44626 rap=0.0690523 phi=0.605221, flav = [u s ]
+SD flav jet  3: pt=7.44626 rap=0.0690523 phi=0.605221, flav = [u s ]
+
+base jet 4: pt=7.3402 rap=0.00843489 phi=1.28811, flav = [dbar ubar ]
+SD flav jet  4: pt=7.3402 rap=0.00843489 phi=1.28811, flav = [dbar ubar ]
+
+base jet 5: pt=3.27161 rap=-0.407406 phi=4.65289, flav = [g]
+SD flav jet  5: pt=3.27161 rap=-0.407406 phi=4.65289, flav = [g]
+
+base jet 6: pt=3.21146 rap=0.501387 phi=4.22762, flav = [g]
+SD flav jet  6: pt=3.21146 rap=0.501387 phi=4.22762, flav = [g]
+
+#---------------------------------------------------------------
+# read event 1 with 91 particles
+now do the sd...
+
+base jet 0: pt=143.136 rap=1.00816 phi=0.315751, flav = [bbar tbar ]
+SD flav jet  0: pt=143.136 rap=1.00816 phi=0.315751, flav = [bbar tbar ]
+
+base jet 1: pt=6.05867 rap=0.0649657 phi=3.29464, flav = [g]
+SD flav jet  1: pt=6.05867 rap=0.0649657 phi=3.29464, flav = [g]
+
+base jet 2: pt=3.58636 rap=0.193706 phi=5.36693, flav = [d ]
+SD flav jet  2: pt=3.58636 rap=0.193706 phi=5.36693, flav = [d ]
+
+base jet 3: pt=3.49044 rap=-0.149006 phi=0.716449, flav = [d b ]
+SD flav jet  3: pt=3.49044 rap=-0.149006 phi=0.716449, flav = [d b ]
+
+base jet 4: pt=3.41124 rap=2.29203 phi=3.90154, flav = [g]
+SD flav jet  4: pt=3.41124 rap=2.29203 phi=3.90154, flav = [g]
+
+base jet 5: pt=3.01848 rap=3.14716 phi=5.74679, flav = [g]
+SD flav jet  5: pt=3.01848 rap=3.14716 phi=5.74679, flav = [g]
+
+base jet 6: pt=2.82862 rap=-3.73093 phi=1.35695, flav = [d ]
+SD flav jet  6: pt=2.82862 rap=-3.73093 phi=1.35695, flav = [d ]
+
+#---------------------------------------------------------------
+# read event 2 with 67 particles
+now do the sd...
+
+base jet 0: pt=72.6916 rap=0.0676305 phi=6.26665, flav = [dbar u c ]
+SD flav jet  0: pt=72.6916 rap=0.0676305 phi=6.26665, flav = [dbar u c ]
+
+base jet 1: pt=30.4721 rap=-1.2557 phi=1.37855, flav = [ubar bbar t ]
+SD flav jet  1: pt=30.4721 rap=-1.2557 phi=1.37855, flav = [ubar bbar t ]
+
+base jet 2: pt=21.2516 rap=0.467594 phi=5.0756, flav = [cbar cbar ]
+SD flav jet  2: pt=21.2516 rap=0.467594 phi=5.0756, flav = [cbar cbar ]
+
+base jet 3: pt=20.9087 rap=0.858619 phi=5.39029, flav = [ubar ]
+SD flav jet  3: pt=20.9087 rap=0.858619 phi=5.39029, flav = [ubar ]
+
+base jet 4: pt=19.611 rap=1.0372 phi=1.25711, flav = [cbar b t ]
+SD flav jet  4: pt=19.611 rap=1.0372 phi=1.25711, flav = [cbar b t ]
+
+base jet 5: pt=18.1229 rap=0.951132 phi=6.13624, flav = [cbar cbar bbar ]
+SD flav jet  5: pt=18.1229 rap=0.951132 phi=6.13624, flav = [cbar cbar bbar ]
+
+base jet 6: pt=9.64769 rap=-0.34528 phi=5.73185, flav = [cbar ]
+SD flav jet  6: pt=9.64769 rap=-0.34528 phi=5.73185, flav = [cbar ]
+
+#---------------------------------------------------------------
+# read event 3 with 62 particles
+now do the sd...
+
+base jet 0: pt=113.596 rap=0.884767 phi=2.15347, flav = [u sbar cbar bbar ]
+SD flav jet  0: pt=113.596 rap=0.884767 phi=2.15347, flav = [u sbar cbar bbar ]
+
+base jet 1: pt=3.10448 rap=3.11464 phi=3.8646, flav = [ubar sbar ]
+SD flav jet  1: pt=3.10448 rap=3.11464 phi=3.8646, flav = [ubar sbar ]
+
+base jet 2: pt=3.0582 rap=0.648404 phi=3.39078, flav = [d s ]
+SD flav jet  2: pt=3.0582 rap=0.648404 phi=3.39078, flav = [d s ]
+
+base jet 3: pt=2.69438 rap=0.14305 phi=2.06223, flav = [bbar ]
+SD flav jet  3: pt=2.69438 rap=0.14305 phi=2.06223, flav = [bbar ]
+
+base jet 4: pt=2.65086 rap=-4.60299 phi=0.987066, flav = [d ]
+SD flav jet  4: pt=2.65086 rap=-4.60299 phi=0.987066, flav = [d ]
+
+base jet 5: pt=2.08811 rap=-0.43226 phi=1.74763, flav = [s ]
+SD flav jet  5: pt=2.08811 rap=-0.43226 phi=1.74763, flav = [s ]
+
+base jet 6: pt=1.77403 rap=3.12402 phi=3.18288, flav = [d ]
+SD flav jet  6: pt=1.77403 rap=3.12402 phi=3.18288, flav = [d ]
+
+#---------------------------------------------------------------
+# read event 4 with 93 particles
+now do the sd...
+
+base jet 0: pt=64.6815 rap=0.391394 phi=0.118011, flav = [u c tbar ]
+SD flav jet  0: pt=64.6815 rap=0.391394 phi=0.118011, flav = [u c tbar ]
+
+base jet 1: pt=60.6132 rap=0.448714 phi=0.539508, flav = [d ubar bbar tbar ]
+SD flav jet  1: pt=60.6132 rap=0.448714 phi=0.539508, flav = [d ubar bbar tbar ]
+
+base jet 2: pt=8.27633 rap=-2.79808 phi=4.26636, flav = [g]
+SD flav jet  2: pt=8.27633 rap=-2.79808 phi=4.26636, flav = [g]
+
+base jet 3: pt=7.33896 rap=1.12216 phi=5.90749, flav = [g]
+SD flav jet  3: pt=7.33896 rap=1.12216 phi=5.90749, flav = [g]
+
+base jet 4: pt=5.6391 rap=-2.22665 phi=3.29502, flav = [dbar dbar t ]
+SD flav jet  4: pt=5.6391 rap=-2.22665 phi=3.29502, flav = [dbar dbar t ]
+
+base jet 5: pt=3.09749 rap=0.126394 phi=1.32143, flav = [d c ]
+SD flav jet  5: pt=3.09749 rap=0.126394 phi=1.32143, flav = [d c ]
+
+base jet 6: pt=3.07467 rap=-0.446667 phi=1.16557, flav = [d cbar ]
+SD flav jet  6: pt=3.07467 rap=-0.446667 phi=1.16557, flav = [d cbar ]
+
+#---------------------------------------------------------------
+# read event 5 with 104 particles
+now do the sd...
+
+base jet 0: pt=103.576 rap=0.670846 phi=5.56992, flav = [ubar c c t ]
+SD flav jet  0: pt=103.576 rap=0.670846 phi=5.56992, flav = [ubar c c t ]
+
+base jet 1: pt=4.58178 rap=-1.90869 phi=2.36617, flav = [dbar ]
+SD flav jet  1: pt=4.58178 rap=-1.90869 phi=2.36617, flav = [dbar ]
+
+base jet 2: pt=3.3254 rap=1.18649 phi=5.73498, flav = [d c ]
+SD flav jet  2: pt=3.3254 rap=1.18649 phi=5.73498, flav = [d c ]
+
+base jet 3: pt=3.17718 rap=2.72848 phi=5.65978, flav = [d ]
+SD flav jet  3: pt=3.17718 rap=2.72848 phi=5.65978, flav = [d ]
+
+base jet 4: pt=3.07538 rap=-2.94002 phi=5.57259, flav = [cbar ]
+SD flav jet  4: pt=3.07538 rap=-2.94002 phi=5.57259, flav = [cbar ]
+
+base jet 5: pt=2.91546 rap=4.90048 phi=0.0643643, flav = [dbar b ]
+SD flav jet  5: pt=2.91546 rap=4.90048 phi=0.0643643, flav = [dbar b ]
+
+base jet 6: pt=2.79087 rap=-0.0839135 phi=3.72992, flav = [g]
+SD flav jet  6: pt=2.79087 rap=-0.0839135 phi=3.72992, flav = [g]
+
+#---------------------------------------------------------------
+# read event 6 with 33 particles
+now do the sd...
+
+base jet 0: pt=108.088 rap=0.864675 phi=1.32688, flav = [d u cbar tbar ]
+SD flav jet  0: pt=108.088 rap=0.864675 phi=1.32688, flav = [d u cbar tbar ]
+
+base jet 1: pt=2.86396 rap=-1.68539 phi=4.29098, flav = [cbar ]
+SD flav jet  1: pt=2.86396 rap=-1.68539 phi=4.29098, flav = [cbar ]
+
+base jet 2: pt=2.39178 rap=4.42295 phi=3.66959, flav = [cbar ]
+SD flav jet  2: pt=2.39178 rap=4.42295 phi=3.66959, flav = [cbar ]
+
+base jet 3: pt=1.54024 rap=6.46583 phi=3.96646, flav = [u u ]
+SD flav jet  3: pt=1.54024 rap=6.46583 phi=3.96646, flav = [u u ]
+
+base jet 4: pt=1.39411 rap=0.46637 phi=1.18941, flav = [sbar ]
+SD flav jet  4: pt=1.39411 rap=0.46637 phi=1.18941, flav = [sbar ]
+
+base jet 5: pt=1.10904 rap=-0.112969 phi=1.10605, flav = [bbar ]
+SD flav jet  5: pt=1.10904 rap=-0.112969 phi=1.10605, flav = [bbar ]
+
+base jet 6: pt=0.975215 rap=3.92022 phi=0.426372, flav = [g]
+SD flav jet  6: pt=0.975215 rap=3.92022 phi=0.426372, flav = [g]
+
+#---------------------------------------------------------------
+# read event 7 with 94 particles
+now do the sd...
+
+base jet 0: pt=100.043 rap=0.69771 phi=5.94573, flav = [s ]
+SD flav jet  0: pt=100.043 rap=0.69771 phi=5.94573, flav = [s ]
+
+base jet 1: pt=20.1253 rap=-0.0197745 phi=6.19708, flav = [d t ]
+SD flav jet  1: pt=20.1253 rap=-0.0197745 phi=6.19708, flav = [d t ]
+
+base jet 2: pt=6.10882 rap=0.418633 phi=0.0728016, flav = [cbar b ]
+SD flav jet  2: pt=6.10882 rap=0.418633 phi=0.0728016, flav = [cbar b ]
+
+base jet 3: pt=6.0838 rap=0.00974429 phi=5.55987, flav = [dbar ]
+SD flav jet  3: pt=6.0838 rap=0.00974429 phi=5.55987, flav = [dbar ]
+
+base jet 4: pt=5.01801 rap=-0.709537 phi=1.47505, flav = [dbar cbar bbar ]
+SD flav jet  4: pt=5.01801 rap=-0.709537 phi=1.47505, flav = [dbar cbar bbar ]
+
+base jet 5: pt=4.02914 rap=2.68799 phi=5.45891, flav = [u ]
+SD flav jet  5: pt=4.02914 rap=2.68799 phi=5.45891, flav = [u ]
+
+base jet 6: pt=3.7647 rap=-0.051307 phi=2.18793, flav = [tbar ]
+SD flav jet  6: pt=3.7647 rap=-0.051307 phi=2.18793, flav = [g]
+
+#---------------------------------------------------------------
+# read event 8 with 54 particles
+now do the sd...
+
+base jet 0: pt=115.562 rap=-0.0319995 phi=0.98162, flav = [s s bbar ]
+SD flav jet  0: pt=115.562 rap=-0.0319995 phi=0.98162, flav = [s s bbar ]
+
+base jet 1: pt=19.9284 rap=-0.828988 phi=2.77712, flav = [d ]
+SD flav jet  1: pt=19.9284 rap=-0.828988 phi=2.77712, flav = [d ]
+
+base jet 2: pt=18.6118 rap=-1.09124 phi=4.95011, flav = [u ]
+SD flav jet  2: pt=18.6118 rap=-1.09124 phi=4.95011, flav = [u ]
+
+base jet 3: pt=6.47879 rap=-2.08208 phi=6.09873, flav = [bbar ]
+SD flav jet  3: pt=6.47879 rap=-2.08208 phi=6.09873, flav = [bbar ]
+
+base jet 4: pt=4.70221 rap=0.0216587 phi=1.47711, flav = [ubar t ]
+SD flav jet  4: pt=4.70221 rap=0.0216587 phi=1.47711, flav = [ubar t ]
+
+base jet 5: pt=3.13994 rap=-0.691291 phi=4.50375, flav = [dbar s bbar ]
+SD flav jet  5: pt=3.13994 rap=-0.691291 phi=4.50375, flav = [dbar s bbar ]
+
+base jet 6: pt=2.35082 rap=-1.1166 phi=1.72703, flav = [bbar tbar ]
+SD flav jet  6: pt=2.35082 rap=-1.1166 phi=1.72703, flav = [bbar tbar ]
+
+#---------------------------------------------------------------
+# read event 9 with 83 particles
+now do the sd...
+
+base jet 0: pt=152.951 rap=-1.12892 phi=3.71297, flav = [d ubar t ]
+SD flav jet  0: pt=152.951 rap=-1.12892 phi=3.71297, flav = [d ubar t ]
+
+base jet 1: pt=32.7921 rap=-1.47995 phi=3.14857, flav = [sbar ]
+SD flav jet  1: pt=32.7921 rap=-1.47995 phi=3.14857, flav = [sbar ]
+
+base jet 2: pt=14.5434 rap=-0.236368 phi=4.20355, flav = [s ]
+SD flav jet  2: pt=14.5434 rap=-0.236368 phi=4.20355, flav = [s ]
+
+base jet 3: pt=5.86654 rap=-0.108314 phi=0.65315, flav = [g]
+SD flav jet  3: pt=5.86654 rap=-0.108314 phi=0.65315, flav = [g]
+
+base jet 4: pt=5.74416 rap=-2.32732 phi=0.756969, flav = [dbar ]
+SD flav jet  4: pt=5.74416 rap=-2.32732 phi=0.756969, flav = [dbar ]
+
+base jet 5: pt=5.17296 rap=2.12147 phi=1.68231, flav = [ubar ]
+SD flav jet  5: pt=5.17296 rap=2.12147 phi=1.68231, flav = [ubar ]
+
+base jet 6: pt=4.33602 rap=0.46465 phi=2.86917, flav = [b ]
+SD flav jet  6: pt=4.33602 rap=0.46465 phi=2.86917, flav = [g]
