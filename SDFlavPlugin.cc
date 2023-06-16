@@ -8,8 +8,9 @@ using fastjet::contrib::FlavInfo;
 using fastjet::contrib::FlavHistory;
 
 void SDFlavourCalc::operator()(fastjet::PseudoJet& jet) {
-  fastjet::ClusterSequence cs(jet.constituents(), m_plugin);
-  std::vector<fastjet::PseudoJet> sdjets = m_sd(cs.exclusive_jets_up_to(1));
+  fastjet::ClusterSequence cs(jet.constituents(), p_plugin.get());
+  cs.exclusive_jets_up_to(1);
+  std::vector<fastjet::PseudoJet> sdjets = p_sd->operator()(cs.exclusive_jets_up_to(1));
   if(sdjets.size() != 1) jet.set_user_info(new FlavHistory(FlavInfo()));
   std::vector<fastjet::PseudoJet> sdj = sdjets[0].constituents();
   FlavInfo flavj = FlavHistory::current_flavour_of(sdj[0]);

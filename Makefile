@@ -4,7 +4,7 @@ LIBS:=$(shell fastjet-config --libs --plugins)
 
 all: libSDFlavPlugin.a libFlavInfo.a
 
-SDFlavPlugin.o: SDFlavPlugin.cc
+SDFlavPlugin.o: SDFlavPlugin.cc SDFlavPlugin.hh
 	g++ -std=c++11 -c SDFlavPlugin.cc ${CXXFLAGS}
 
 libSDFlavPlugin.a: SDFlavPlugin.o libFlavInfo.a
