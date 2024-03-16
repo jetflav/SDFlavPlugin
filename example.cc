@@ -2,8 +2,12 @@
 #include <iomanip>
 
 #include "fastjet/PseudoJet.hh"
-#include "SDFlavPlugin.hh" 
+#include "SDFlavPlugin.hh"
 #include "FlavInfo.hh"
+#include "fastjet/contrib/SoftDrop.hh"
+#include "fastjet/JadePlugin.hh"
+#include "fastjet/contrib/Recluster.hh"
+
 
 using namespace std;
 using namespace fastjet;
@@ -33,7 +37,20 @@ int main(int iargc, char **argv){
   FlavRecombiner flav_recombiner;
   base_jet_def.set_recombiner(&flav_recombiner);
 
-  SDFlavourCalc sdFlavCalc;
+
+  /// to implement the algorithm from arXiv:2205.01109, we need the
+  /// SoftDrop plugin and set the reclustering to jade
+  fastjet::SoftDrop* p_sd = new fastjet::contrib::SoftDrop(beta, zcut,
+                                                  fastjet::contrib::RecursiveSymmetryCutBase::SymmetryMeasure::scalar_z,
+                                                  R,
+                                                  std::numeric_limits<double>::infinity(),
+                                                  fastjet::contrib::RecursiveSymmetryCutBase::RecursionChoice::larger_pt,
+                                                           0);
+  fastjet::JadePlugin jade;
+  fastjet::Recluster recluster(fastjet::JetDefinition(&jade));
+  p_sd->set_reclustering(true,p_recluster.get());
+
+  TransformFlavourCalc sdFlavCalc(p_sd);
 
   // loop over some number of events
   int n_events = 10;
